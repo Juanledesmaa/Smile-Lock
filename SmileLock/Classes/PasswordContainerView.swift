@@ -92,8 +92,8 @@ open class PasswordContainerView: UIView {
             self.widthConstraint.constant = width
         }
     }
-    fileprivate let kDefaultWidth: CGFloat = 300
-    fileprivate let kDefaultHeight: CGFloat = 410
+    fileprivate let kDefaultWidth: CGFloat = 330
+    fileprivate let kDefaultHeight: CGFloat = 390
     fileprivate var widthConstraint: NSLayoutConstraint!
     
     fileprivate func configureConstraints() {
@@ -283,4 +283,4 @@ extension PasswordContainerView: PasswordInputViewTappedProtocol {
 
         inputString += tappedString
     }
-}
+
