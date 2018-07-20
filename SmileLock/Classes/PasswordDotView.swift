@@ -40,7 +40,7 @@ open class PasswordDotView: UIView {
     }
 
     fileprivate var radius: CGFloat = 6
-    fileprivate let spacingRatio: CGFloat = 2
+    fileprivate let spacingRatio: CGFloat = 4
     fileprivate let borderWidthRatio: CGFloat = 1 / 5
     
     fileprivate(set) open var isFull = false

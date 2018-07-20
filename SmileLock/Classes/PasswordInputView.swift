@@ -21,7 +21,7 @@ open class PasswordInputView: UIView {
     let button = UIButton()
     open let label = UILabel()
     open var labelFont: UIFont?
-    fileprivate let fontSizeRatio: CGFloat = 46 / 40
+    fileprivate let fontSizeRatio: CGFloat = 46 / 42
     fileprivate let borderWidthRatio: CGFloat = 1 / 26
     fileprivate var touchUpFlag = true
     fileprivate(set) open var isAnimating = false
@@ -42,7 +42,7 @@ open class PasswordInputView: UIView {
     }
     
     @IBInspectable
-    open var circleBackgroundColor = UIColor.white {
+    open var circleBackgroundColor = UIColor(red: 193.0 / 255.0, green: 193.0 / 255.0, blue: 193.0 / 255.0, alpha: 1.0){
         didSet {
             circleView.backgroundColor = circleBackgroundColor
         }
@@ -105,8 +105,8 @@ open class PasswordInputView: UIView {
         let width = bounds.width
         let height = bounds.height
         let radius = min(width, height) / 2
-        return UIFont.systemFont(ofSize: radius * fontSizeRatio,
-                                 weight: touchUpFlag ? UIFont.Weight.thin : UIFont.Weight.regular)
+        let font = UIFont(name: "HelveticaNeue-Light", size: radius * fontSizeRatio)!
+        return font
     }
     
     fileprivate func updateUI() {
