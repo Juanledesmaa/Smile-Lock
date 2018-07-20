@@ -21,8 +21,8 @@ open class PasswordInputView: UIView {
     let button = UIButton()
     open let label = UILabel()
     open var labelFont: UIFont?
-    fileprivate let fontSizeRatio: CGFloat = 46 / 42
-    fileprivate let borderWidthRatio: CGFloat = 1 / 26
+    fileprivate let fontSizeRatio: CGFloat = 46 / 46
+    fileprivate let borderWidthRatio: CGFloat = 1 / 30
     fileprivate var touchUpFlag = true
     fileprivate(set) open var isAnimating = false
     var isVibrancyEffect = false
@@ -210,7 +210,7 @@ internal extension NSLayoutConstraint {
     class func addConstraints(fromView view: UIView, toView baseView: UIView, constraintInsets insets: UIEdgeInsets) {
         baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
         let topConstraint = baseView.topAnchor.constraint(equalTo: view.topAnchor, constant: -insets.top)
-        let bottomConstraint = baseView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insets.bottom)
+        let bottomConstraint = baseView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 40.0)
         let leftConstraint = baseView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -insets.left)
         let rightConstraint = baseView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: insets.right)
         NSLayoutConstraint.activate([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
