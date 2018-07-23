@@ -284,3 +284,4 @@ extension PasswordContainerView: PasswordInputViewTappedProtocol {
         inputString += tappedString
     }
 
+}
